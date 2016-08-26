@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		FB0C640C1D70945800C409AB /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB0C640A1D70945800C409AB /* Model.xcdatamodeld */; };
-		FB0C640E1D7094A800C409AB /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C640D1D7094A800C409AB /* ListTableViewController.swift */; };
 		FB0C64101D7094B700C409AB /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C640F1D7094B700C409AB /* ListController.swift */; };
 		FB0C64161D7095B000C409AB /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C64151D7095B000C409AB /* Stack.swift */; };
 		FB0C64231D709B7500C409AB /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C64211D709B7500C409AB /* Person+CoreDataProperties.swift */; };
 		FB0C64241D709B7500C409AB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C64221D709B7500C409AB /* Person.swift */; };
+		FB0C64271D70A03300C409AB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0C64261D70A03300C409AB /* ListViewController.swift */; };
 		FB0ECD371D7093670032D5DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0ECD361D7093670032D5DE /* AppDelegate.swift */; };
 		FB0ECD3C1D7093670032D5DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0ECD3A1D7093670032D5DE /* Main.storyboard */; };
 		FB0ECD3F1D7093670032D5DE /* Pair.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB0ECD3D1D7093670032D5DE /* Pair.xcdatamodeld */; };
@@ -22,11 +22,11 @@
 
 /* Begin PBXFileReference section */
 		FB0C640B1D70945800C409AB /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		FB0C640D1D7094A800C409AB /* ListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		FB0C640F1D7094B700C409AB /* ListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 		FB0C64151D7095B000C409AB /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		FB0C64211D709B7500C409AB /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FB0C64221D709B7500C409AB /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		FB0C64261D70A03300C409AB /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FB0ECD331D7093670032D5DE /* Pair.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pair.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB0ECD361D7093670032D5DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB0ECD3B1D7093670032D5DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		FB0C64251D709D0000C409AB /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FB0C640D1D7094A800C409AB /* ListTableViewController.swift */,
+				FB0C64261D70A03300C409AB /* ListViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -184,8 +184,8 @@
 				FB0ECD371D7093670032D5DE /* AppDelegate.swift in Sources */,
 				FB0C64161D7095B000C409AB /* Stack.swift in Sources */,
 				FB0C640C1D70945800C409AB /* Model.xcdatamodeld in Sources */,
+				FB0C64271D70A03300C409AB /* ListViewController.swift in Sources */,
 				FB0C64241D709B7500C409AB /* Person.swift in Sources */,
-				FB0C640E1D7094A800C409AB /* ListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

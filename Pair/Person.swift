@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 
 
+
 class Person: NSManagedObject {
 
     convenience init?(name: String, groupNumber: Int?, context: NSManagedObjectContext = Stack.sharedStack.managedObjectContext){

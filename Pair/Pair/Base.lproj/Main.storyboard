@@ -8,7 +8,7 @@
         <!--Pair Randomizer-->
         <scene sceneID="8IW-xU-BSF">
             <objects>
-                <viewController id="8uC-pi-daY" sceneMemberID="viewController">
+                <viewController id="8uC-pi-daY" customClass="ListViewController" customModule="Pair" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Kmi-nl-Q26"/>
                         <viewControllerLayoutGuide type="bottom" id="Rlm-Rg-Gf4"/>
@@ -17,26 +17,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LYa-ku-9OT">
-                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Xn1-eR-wVl">
-                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xn1-eR-wVl" id="BhO-P8-Y0F">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dly-AG-g5l">
                                 <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhI-4b-BX1">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <state key="normal" title="Randomize"/>
+                                        <connections>
+                                            <action selector="randomizeButtonTapped:" destination="8uC-pi-daY" eventType="touchUpInside" id="KBu-hu-vfc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,22 +37,52 @@
                                     <constraint firstAttribute="trailing" secondItem="vhI-4b-BX1" secondAttribute="trailing" id="tAp-Gr-hjy"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zio-2S-lZe">
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="personCell" id="wia-Ec-482">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wia-Ec-482" id="ne5-RM-wj6">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8uC-pi-daY" id="MA2-gm-ghe"/>
+                                    <outlet property="delegate" destination="8uC-pi-daY" id="sZL-mj-3s0"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="LYa-ku-9OT" firstAttribute="leading" secondItem="Oez-oU-DJJ" secondAttribute="leading" id="6aO-Pi-DWZ"/>
                             <constraint firstItem="dly-AG-g5l" firstAttribute="leading" secondItem="Oez-oU-DJJ" secondAttribute="leading" id="8Ao-RH-9if"/>
                             <constraint firstAttribute="trailing" secondItem="dly-AG-g5l" secondAttribute="trailing" id="DL5-8b-Kus"/>
+                            <constraint firstItem="zio-2S-lZe" firstAttribute="top" secondItem="Kmi-nl-Q26" secondAttribute="bottom" id="EE4-3U-LOK"/>
+                            <constraint firstItem="dly-AG-g5l" firstAttribute="top" secondItem="zio-2S-lZe" secondAttribute="bottom" id="IBd-wV-IqH"/>
+                            <constraint firstItem="zio-2S-lZe" firstAttribute="leading" secondItem="Oez-oU-DJJ" secondAttribute="leading" id="MAW-d4-8ul"/>
+                            <constraint firstAttribute="trailing" secondItem="zio-2S-lZe" secondAttribute="trailing" id="SdJ-tu-8Xe"/>
                             <constraint firstItem="Rlm-Rg-Gf4" firstAttribute="top" secondItem="dly-AG-g5l" secondAttribute="bottom" id="SeJ-1g-mbu"/>
-                            <constraint firstAttribute="trailing" secondItem="LYa-ku-9OT" secondAttribute="trailing" id="Tcv-NM-sFN"/>
-                            <constraint firstItem="LYa-ku-9OT" firstAttribute="top" secondItem="Kmi-nl-Q26" secondAttribute="bottom" id="chQ-YW-qtc"/>
-                            <constraint firstItem="dly-AG-g5l" firstAttribute="top" secondItem="LYa-ku-9OT" secondAttribute="bottom" id="neM-aC-lev"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Pair Randomizer" id="kiG-4p-hJ6">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qpd-AI-mTg"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="09r-1x-tZc">
+                            <connections>
+                                <action selector="clearAllButtonTapped:" destination="8uC-pi-daY" id="KH8-V4-jWA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="qpd-AI-mTg">
+                            <connections>
+                                <action selector="addNewNameButtonTapped:" destination="8uC-pi-daY" id="geC-Gr-as8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="zio-2S-lZe" id="ujg-gp-cJ1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="okc-uK-dr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
